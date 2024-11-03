@@ -21,7 +21,7 @@ class CustomNoteCart extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.only(left: 24, top: 24, bottom: 24, right: 8),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16), color: Colors.yellow),
+            borderRadius: BorderRadius.circular(16), color: Color(note.color)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
