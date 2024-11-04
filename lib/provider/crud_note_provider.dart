@@ -26,8 +26,9 @@ class AddNoteNotifier extends _$AddNoteNotifier {
     state = const AsyncLoading();
     print('dddddd');
     await Future.delayed(Duration(seconds: 2), () async {
-      var noteBox = Hive.box(kNotesBox);
       try {
+        var noteBox = Hive.box(kNotesBox);
+
         await noteBox.add(note);
         //    print(Hive.box(kNotesBox).values.toList());
         state = AsyncData(note);
@@ -45,6 +46,12 @@ class AddNoteNotifier extends _$AddNoteNotifier {
     } on Exception catch (e) {
       state = AsyncError(e.toString(), StackTrace.current);
     }
+  }
+
+  void editNote(notekey, NoteModel note) async {
+    var noteBox = Hive.box(kNotesBox);
+    await noteBox.put(notekey, note);
+    state = AsyncData(note);
   }
 
   void setColor({required Color c}) {

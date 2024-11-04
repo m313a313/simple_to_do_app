@@ -26,9 +26,11 @@ class FetchNotes extends _$FetchNotes {
       print('vvvvvvvvvv');
       d = Hive.box(kNotesBox).values.toList();
       print(d);
+      // state = AsyncValue.data(d) as List<NoteModel>;
       return d;
     } catch (e) {
       print(e.toString());
+      //   state =AsyncError(error, stackTrace)
       return [];
     }
   }

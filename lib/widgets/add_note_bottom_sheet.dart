@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:to_do/constants.dart';
-import 'package:to_do/models/note_model.dart';
 import 'package:to_do/provider/crud_note_provider.dart';
 import 'package:to_do/widgets/custom_button.dart';
 import 'package:to_do/widgets/custom_text_field.dart';

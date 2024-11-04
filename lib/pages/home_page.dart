@@ -20,9 +20,24 @@ class HomePage extends StatelessWidget {
                 return AddNoteBottomSheetBody();
               });
         },
-        child: const Icon(Icons.add,color: Colors.black,),
+        child: const Icon(
+          Icons.add,
+          color: Colors.black,
+        ),
       ),
       body: const NotesViewBody(),
     );
+  }
+}
+
+void _selectTime(
+  BuildContext context,
+) async {
+  TimeOfDay? pickedTime = await showTimePicker(
+    context: context,
+    initialTime: TimeOfDay.now(),
+  );
+  if (pickedTime != null) {
+    // ref.read(timeProvider.notifier).state = pickedTime;
   }
 }

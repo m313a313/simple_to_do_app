@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:to_do/widgets/custom_app_bar.dart';
-import 'package:to_do/widgets/custom_note_cart.dart';
 import 'package:to_do/widgets/noteL_list_view.dart';
 
 class NotesViewBody extends StatelessWidget {
@@ -17,6 +15,7 @@ class NotesViewBody extends StatelessWidget {
             height: 30,
           ),
           CustomAppBar(title:'Notes' ,icon: Icons.search,),
+        
           Expanded(child: NotelListView())
         ],
       ),

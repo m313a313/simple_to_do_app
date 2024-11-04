@@ -15,7 +15,7 @@ class CustomNoteCart extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const EditNotePage();
+          return  EditNotePage(note: note);
         }));
       },
       child: Container(
